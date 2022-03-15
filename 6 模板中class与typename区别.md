@@ -11,7 +11,7 @@
 一般对模板参数类型`typename`和`class`认为是一样的. 这两者在参数类型中确实是一样的. 你可以写成
 
 ```c++
-template<class T> 
+template<class T>
 class point {};
 ```
 
@@ -22,7 +22,7 @@ template<typename T>
 class point {};
 ```
 
-这两者都是一样的, 没有区别. <font color=#b20>两者`typename`和`class`在**参数类型**中没有不同</font> 
+这两者都是一样的, 没有区别. <font color=#b20>两者`typename`和`class`在**参数类型**中没有不同</font>
 
 *既然相同又为什么定义这两个符号呢?*
 
@@ -33,7 +33,7 @@ class point {};
 
 ### 不同之处
 
-`typename`可以用在嵌套依赖中, 并且表示其类型, 而`class`并没有这样的功能. 
+`typename`可以用在嵌套依赖中, 并且表示其类型, 而`class`并没有这样的功能.
 
 *什么是嵌套依赖?* 我们以一个简单的实例来看
 
@@ -48,7 +48,7 @@ class people
 };
 
 template<class T>
-struct man 
+struct man
 {
 	public:
 		typedef typename T::value_type	value_type;
@@ -71,7 +71,7 @@ int main()
 
 以上就是`typename`的嵌套使用. `typename`告诉编译器这不是一个函数, 也不是一个变量而是一个类型. 这里使用typedef又将参数类型重新定义一次, 1. 增加了一层间接性, 2. 使用的时候也不需要在写很长的代码.
 
-这里`typename`是对people类中定义的类型进行了一次提取, 这里将`typename`改为`class`就会出错. 
+这里`typename`是对people类中定义的类型进行了一次提取, 这里将`typename`改为`class`就会出错.
 
 `typename`主要的作用:
 

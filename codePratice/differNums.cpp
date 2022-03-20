@@ -9,6 +9,7 @@ int main(){
     int a = 0, b = 0;
     vector<int> nums(M+1, 0);
     string s;
+
     cin >> s;
     for (int i = 0; i < N; ++i)
     {

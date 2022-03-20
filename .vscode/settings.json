@@ -107,6 +107,7 @@
         "inet.h": "c",
         "netdb.h": "c",
         "csapp.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "unordered_set": "cpp"
     }
 }
